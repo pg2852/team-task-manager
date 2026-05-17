@@ -12,7 +12,7 @@ function Signup() {
         try {
 
             const response = await axios.post(
-                "https://team-task-manager-1-a80f.onrender.com/signup",
+                "https://team-task-manager-1-a80f.onrender.com/api/auth/signup",
                 {
                     name,
                     email,
