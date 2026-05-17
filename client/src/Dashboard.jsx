@@ -18,7 +18,7 @@ function Dashboard() {
         try {
 
             await axios.post(
-                "http://localhost:5000/tasks/create",
+                "https://team-task-manager-1-a80f.onrender.com/tasks/create",
                 {
                     title,
                     description,
@@ -43,7 +43,7 @@ function Dashboard() {
         try {
 
             await axios.delete(
-                `http://localhost:5000/tasks/${id}`
+                `https://team-task-manager-1-a80f.onrender.com/tasks/${id}`
             )
 
             alert("Task Deleted")
@@ -70,7 +70,7 @@ function Dashboard() {
         try {
 
             await axios.put(
-                `http://localhost:5000/tasks/${task._id}`,
+                `https://team-task-manager-1-a80f.onrender.com/tasks/${task._id}`,
                 {
                     title: newTitle
                 }
@@ -105,7 +105,7 @@ function Dashboard() {
                 const token = localStorage.getItem("token")
 
                 const response = await axios.get(
-                    "http://localhost:5000/profile",
+                    "https://team-task-manager-1-a80f.onrender.com/profile",
                     {
                         headers: {
                             authorization: token
@@ -128,7 +128,7 @@ function Dashboard() {
             try {
 
                 const response = await axios.get(
-                    "http://localhost:5000/tasks"
+                    "https://team-task-manager-1-a80f.onrender.com/tasks"
                 )
 
                 setTasks(response.data)
@@ -227,7 +227,7 @@ function Dashboard() {
                                 onChange={async (e) => {
 
                                     await axios.put(
-                                        `http://localhost:5000/tasks/${task._id}`,
+                                        `https://team-task-manager-1-a80f.onrender.com/tasks/${task._id}`,
                                         {
                                             status: e.target.value
                                         }
